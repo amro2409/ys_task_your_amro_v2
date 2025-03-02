@@ -1,4 +1,4 @@
-package com.task.appv2.data.data_source.local.entities;
+package com.task.appv2.data.source.local.entities;
 
 import com.google.gson.annotations.SerializedName;
 

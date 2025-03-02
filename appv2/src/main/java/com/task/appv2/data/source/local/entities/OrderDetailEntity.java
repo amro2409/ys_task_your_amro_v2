@@ -1,4 +1,4 @@
-package com.task.appv2.data.data_source.local.entities;
+package com.task.appv2.data.source.local.entities;
 
 
 import androidx.annotation.NonNull;
@@ -7,8 +7,8 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
-import com.task.appv2.data.data_source.local.entries.OrderDetailEntries;
-import com.task.appv2.data.data_source.local.entries.OrderMasterEntries;
+import com.task.appv2.data.source.local.entries.OrderDetailEntries;
+import com.task.appv2.data.source.local.entries.OrderMasterEntries;
 
 @Entity(tableName ="OrderDetailEntity",
         foreignKeys = @ForeignKey(entity = OrderMasterEntity.class,

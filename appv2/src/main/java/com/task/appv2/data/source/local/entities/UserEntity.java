@@ -1,4 +1,4 @@
-package com.task.appv2.data.data_source.local.entities;
+package com.task.appv2.data.source.local.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -10,6 +10,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class UserEntity {
 
+    @NonNull
     @PrimaryKey
     @SerializedName("U_ID")
     private String userId;
