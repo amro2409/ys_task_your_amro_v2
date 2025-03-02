@@ -9,9 +9,11 @@ public class ApiResponse<T> {
     public Result result;
 
     public static class Result {
+
         @SerializedName("ErrNo")
         public String errNo;
         @SerializedName("ErrMsg")
         public String errMessage;
     }
+
 }

@@ -2,6 +2,7 @@ package com.task.appv2.data.source.local.entities;
 
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -17,6 +18,7 @@ import com.task.appv2.data.source.local.entries.OrderMasterEntries;
                 onDelete = ForeignKey.CASCADE))
 public class OrderDetailEntity {
 
+    @ColumnInfo(index = true)
     private String orderSrlFk;
 
     @NonNull
