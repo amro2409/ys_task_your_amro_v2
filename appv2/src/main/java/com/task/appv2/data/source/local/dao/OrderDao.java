@@ -20,7 +20,8 @@ public interface OrderDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertOrderMaster(OrderMasterEntity orderMaster);
-
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertOrderMaster(List<OrderMasterEntity> orderMaster);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertOrderDetails(List<OrderDetailEntity> orderDetails);

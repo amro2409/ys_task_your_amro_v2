@@ -2,9 +2,13 @@ package com.task.appv2.data.source.local.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+import java.util.Objects;
 
 @Entity(tableName = "OrderMasterEntity")
 
@@ -90,10 +94,21 @@ public class OrderMasterEntity {
     @SerializedName("TBL_NO")
     private String tblNo; // TBL_NO
 
+    @Ignore
+    private List<OrderDetailEntity> ordrDtl;
 
 
 
     // Getters & Setters
+
+
+    public List<OrderDetailEntity> getOrdrDtl() {
+        return ordrDtl;
+    }
+
+    public void setOrdrDtl(List<OrderDetailEntity> ordrDtl) {
+        this.ordrDtl = ordrDtl;
+    }
 
     @NonNull
     public String getOrderSrl() {
@@ -310,5 +325,34 @@ public class OrderMasterEntity {
 
     public void setTrmnlNo(String trmnlNo) {
         this.trmnlNo = trmnlNo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof OrderMasterEntity)) return false;
+        OrderMasterEntity that = (OrderMasterEntity) o;
+        return orderSrl.equals(that.orderSrl) &&
+                Objects.equals(billNo, that.billNo) &&
+                Objects.equals(billDate, that.billDate) &&
+                Objects.equals(billTime, that.billTime) &&
+                Objects.equals(orderNote, that.orderNote) &&
+                Objects.equals(billDocType, that.billDocType) &&
+                Objects.equals(billDocTypeNm, that.billDocTypeNm) &&
+                Objects.equals(lastUpdt, that.lastUpdt) &&
+                Objects.equals(cnclFlg, that.cnclFlg) &&
+                Objects.equals(prcssdFlg, that.prcssdFlg) &&
+                Objects.equals(prcssdUId, that.prcssdUId) &&
+                Objects.equals(prcssdDate, that.prcssdDate) &&
+                Objects.equals(adDate, that.adDate) &&
+                Objects.equals(ordrTrcFlg, that.ordrTrcFlg) &&
+                Objects.equals(pssdTm, that.pssdTm) &&
+                Objects.equals(ordrSts, that.ordrSts) &&
+                Objects.equals(billSrl, that.billSrl);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(orderSrl, billNo, billDate, billTime, orderNote, billDocType, billDocTypeNm, lastUpdt, cnclFlg, prcssdFlg, prcssdUId, prcssdDate, adDate, ordrTrcFlg, pssdTm, ordrSts, billSrl);
     }
 }

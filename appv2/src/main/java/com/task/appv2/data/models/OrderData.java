@@ -1,10 +1,11 @@
-package com.task.appv2.data.source.local.entities;
+package com.task.appv2.data.models;
 
 import com.google.gson.annotations.SerializedName;
+import com.task.appv2.data.source.local.entities.OrderMasterEntity;
 
 import java.util.List;
 
-public class OrderEntity {
+public class OrderData {
     @SerializedName("OrderMasterList")
     private List<OrderMasterEntity> orderMasterList;
 

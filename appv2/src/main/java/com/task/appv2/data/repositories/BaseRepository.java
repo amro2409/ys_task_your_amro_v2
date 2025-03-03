@@ -40,18 +40,22 @@ public abstract class BaseRepository {
         return new Callback<T>() {
             @Override
             public void onResponse(@NotNull Call<T> call, @NonNull Response<T> response) {
-                if (response.isSuccessful()) {
-                    if (response.body() != null) {
-                        printEvent(String.format("1-onSuccess-> result %s :%s", title, response.body().toString()));
-                        callback.onSuccess(response.body());
+              try{  if (response.isSuccessful()) {
+
+                        if (response.body() != null) {
+                            printEvent(String.format("1-onSuccess-> result %s :%s", title, response.body().toString()));
+                            callback.onSuccess(response.body());
+                            return;
+                        }
+                        printError(String.format("2-onResponse-> " + title + ":Empty response body - %s", response.toString()));
+                        callback.onError(getRespError(response.toString()));
                         return;
                     }
-                    printError(String.format("2-onResponse-> " + title + ":Empty response body - %s", response.toString()));
-                    callback.onError(getRespError(response.toString()));
-                    return;
-                }
-                printError(String.format("3-Server Error -> %s: unsuccessful Response  - %s", title, getRespError(response.toString())));
-                callback.onError(String.format("3-Server Error -> %s unsuccessful Response - %s", title, getRespError(response.toString())));
+                    printError(String.format("3-Server Error -> %s: unsuccessful Response  - %s", title, getRespError(response.toString())));
+                    callback.onError(String.format("3-Server Error -> %s unsuccessful Response - %s", title, getRespError(response.toString())));
+                }catch (Exception e){
+                  callback.onError(String.format("Local Error-> %s%s", title, e.toString()));
+              }
             }
 
             @Override

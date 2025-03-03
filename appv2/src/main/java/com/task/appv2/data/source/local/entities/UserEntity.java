@@ -6,6 +6,8 @@ import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
 @Entity(tableName = "UserData")
 
 public class UserEntity {
@@ -375,5 +377,46 @@ public class UserEntity {
 
     public void setUserOnline(String userOnline) {
         this.userOnline = userOnline;
+    }
+
+    @NotNull
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userManager='" + userManager + '\'' +
+                ", password='" + password + '\'' +
+                ", terminalNo='" + terminalNo + '\'' +
+                ", terminalName='" + terminalName + '\'' +
+                ", terminalLogin='" + terminalLogin + '\'' +
+                ", loginDate='" + loginDate + '\'' +
+                ", logoutDate='" + logoutDate + '\'' +
+                ", groupNo='" + groupNo + '\'' +
+                ", password2='" + password2 + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", loginMethod='" + loginMethod + '\'' +
+                ", dayActive='" + dayActive + '\'' +
+                ", inactive='" + inactive + '\'' +
+                ", inactiveDate='" + inactiveDate + '\'' +
+                ", inactiveUserId='" + inactiveUserId + '\'' +
+                ", inactiveReason='" + inactiveReason + '\'' +
+                ", code='" + code + '\'' +
+                ", userType='" + userType + '\'' +
+                ", adminUser='" + adminUser + '\'' +
+                ", changePasswordAfterLogin='" + changePasswordAfterLogin + '\'' +
+                ", connectWebSystem='" + connectWebSystem + '\'' +
+                ", updatePasswordCount='" + updatePasswordCount + '\'' +
+                ", screenThemeNo='" + screenThemeNo + '\'' +
+                ", loggedOn='" + loggedOn + '\'' +
+                ", loginCount='" + loginCount + '\'' +
+                ", connectionBranchNo='" + connectionBranchNo + '\'' +
+                ", cashNo='" + cashNo + '\'' +
+                ", employeeNo='" + employeeNo + '\'' +
+                ", userOnline='" + userOnline + '\'' +
+                '}';
     }
 }

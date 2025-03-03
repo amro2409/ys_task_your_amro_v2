@@ -2,6 +2,8 @@ package com.task.appv2.data.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ApiResponse<T> {
     @SerializedName("Data")
     public T data;
@@ -14,6 +16,28 @@ public class ApiResponse<T> {
         public String errNo;
         @SerializedName("ErrMsg")
         public String errMessage;
-    }
 
+        @NotNull
+        @Override
+        public String toString() {
+            return "Result{" +
+                    "errNo='" + errNo + '\'' +
+                    ", errMessage='" + errMessage + '\'' +
+                    '}';
+        }
+    }
+//    public static class Data {
+//
+//        @SerializedName("ErrNo")
+//        public T data;
+//
+//    }
+    @NotNull
+    @Override
+    public String toString() {
+        return "ApiResponse{" +
+                "data=" + data +
+                ", result=" + result +
+                '}';
+    }
 }
