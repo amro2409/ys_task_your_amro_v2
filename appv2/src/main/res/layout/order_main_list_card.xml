@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_order_list_change"
+    android:paddingHorizontal="@dimen/_1sdp">
+
+    <!-- Top panel Order  -->
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_s"
+        android:orientation="vertical">
+        <!-- Top Card - order status flags and Time -->
+        <FrameLayout
+            android:id="@+id/top_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_order_status_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_xs"
+                    android:src="@drawable/ic_changed" />
+
+                <TextView
+                    android:id="@+id/item_order_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/label_delayed"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    android:textColor="@color/on_primary_container" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_pssd_time_tv"
+                style="@style/MyBodyMStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="10:48 AM"
+                android:textColor="@color/on_surface" />
+
+        </FrameLayout>
+
+        <!-- Order Info - Order No, Order Type, Time Taken -->
+        <TextView
+            android:id="@+id/item_order_no_tv"
+            style="@style/MyTitleStyle"
+            android:layout_marginVertical="@dimen/space_s"
+            android:text="# Order No 645263"
+            android:textColor="@color/on_primary_container" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MyLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_order_type"
+                    android:textColor="@color/on_surface_variant" />
+
+                <TextView
+                    style="@style/MyBodyLStyle"
+                    android:id="@+id/item_order_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_dine_in"
+                    android:gravity="center"
+                    android:fontFamily="@font/almarai_extrabold"
+                    android:textColor="@color/on_surface" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:background="#BDBDBD" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/MyLabelStyle"
+                    android:text="@string/label_time_taken"
+                    android:textColor="@color/on_surface_variant" />
+
+                <TextView
+                    style="@style/MyBodyLStyle"
+                    android:id="@+id/item_bill_time_tv"
+                    android:text="00 : 00"
+                    android:fontFamily="@font/almarai_extrabold"
+                    android:textColor="@color/on_surface" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Item lines - list -->
+    <LinearLayout
+        android:id="@+id/lowerPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topPanel"
+        android:background="@drawable/lower_panel_bg"
+        android:layout_marginBottom="@dimen/space_xxs"
+        android:orientation="vertical"
+        android:padding="@dimen/space_xxs">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/items_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/space_s"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/pump_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/order_sub_list_item" />
+
+        <!-- Pump Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pump_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_md"
+            android:backgroundTint="@color/primary"
+            android:paddingVertical="@dimen/space_sm"
+            android:text="@string/btn_text_pump"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/border_radius_lg"
+            app:icon="@drawable/ic_pump"
+            app:iconGravity="textStart"
+          />
+    </LinearLayout>
+</RelativeLayout>

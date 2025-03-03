@@ -1,0 +1,140 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Ys_task_amro" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_200</item>
+        <item name="colorSecondaryVariant">@color/secondary_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+    <style name="NumbersCircleStyle">
+        <item name="android:layout_height">@dimen/_34sdp</item>
+        <item name="android:layout_width">@dimen/_34sdp</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:background">@drawable/circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/_5sdp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyHeadLineStyle" >
+        <item name="android:textAppearance">@style/TextAppearance.Material3.DisplaySmall</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+        <item name="android:layout_marginVertical" tools:ignore="NewApi">@dimen/space_xxs</item>
+        <item name="android:layout_marginEnd" >@dimen/space_xs</item>
+        <item name="android:paddingEnd" >@dimen/space_xs</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/space_xxs</item>
+    </style>
+
+
+    <style name="MyTitleStyle" >
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_primary_container</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/space_xxs</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/space_xxs</item>
+
+    </style>
+
+
+
+    <style name="MyLabelStyle">
+        <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginVertical" tools:ignore="NewApi">@dimen/space_xxs</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/space_xxs</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/space_xxs</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/space_xxs</item>
+    </style>
+
+    <style name="MyBodyLStyle">
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyLarge</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/_2sdp</item>
+    </style>
+    <style name="MyBodyMStyle">
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/_2sdp</item>
+    </style>
+    <style name="MyBodySStyle">
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/_2sdp</item>
+    </style>
+
+    <style name="StatusTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:layout_marginHorizontal" tools:ignore="NewApi">@dimen/_4sdp</item>
+    </style>
+
+
+    <!-- theme  sweet dialog -->
+    <style name="button_Style_dialog">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="alert_dialog_dark1" parent="alert_dialog_light1">
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background_drak</item>
+        <item name="sweet_alert_title_text_color">@color/is_title_color_dark</item>
+        <item name="sweet_alert_content_text_color">@color/is_message_color_dark</item>
+    </style>
+
+    <style name="alert_dialog_light1" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background</item>
+        <item name="sweet_alert_title_text_color">@color/is_title_color</item>
+        <item name="sweet_alert_content_text_color">@color/is_message_color</item>
+    </style>
+    <!-- end theme  sweet dialog -->
+</resources>

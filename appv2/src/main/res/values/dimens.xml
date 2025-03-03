@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- space   -->
+    <dimen name="space_xxs">@dimen/_2sdp</dimen>
+    <dimen name="space_xs">@dimen/_4sdp</dimen>
+    <dimen name="space_s">@dimen/_8sdp</dimen>
+    <dimen name="space_sm">@dimen/_12sdp</dimen>
+    <dimen name="space_md">@dimen/_16sdp</dimen>
+    <dimen name="space_lg">@dimen/_20sdp</dimen>
+    <dimen name="space_xl">@dimen/_24sdp</dimen>
+    <dimen name="space_xxl">@dimen/_28sdp</dimen>
+    <!-- border_radius   -->
+    <dimen name="border_radius_xxs">@dimen/_2sdp</dimen>
+    <dimen name="border_radius_xs">@dimen/_4sdp</dimen>
+    <dimen name="border_radius_sm">@dimen/_8sdp</dimen>
+    <dimen name="border_radius_md">@dimen/_16sdp</dimen>
+    <dimen name="border_radius_lg">@dimen/_24sdp</dimen>
+    <dimen name="border_radius_xl">@dimen/_32sdp</dimen>
+    <dimen name="border_radius_xxl">@dimen/_40sdp</dimen>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- sweetAlertDialog screen  -->
+    <dimen name="alert_width1">290dp</dimen>
+    <dimen name="buttons_stroke_width1">0sp</dimen>
+    <dimen name="common_circle_width1" tools:ignore="MissingDefaultResource">3dp</dimen>
+    <dimen name="custom_image_size1">53dp</dimen>
+    <dimen name="progress_circle_radius1">34dp</dimen>
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="buttons_stroke_width">0dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="custom_image_size">53dp</dimen>
+    <dimen name="text_margin">8dp</dimen>
+    <dimen name="cpb_stroke_width">4dp</dimen>
+
+
+</resources>

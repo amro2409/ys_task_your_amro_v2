@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">App V2</string>
+
+    <string name="log_in">Log in</string>
+    <string name="please_enter_your_pin_code_to_login">Please enter your PIN code to login</string>
+    <string name="try_demo_text_btn">Try Demo</string>
+
+    <string name="label_text_notify_down">"Downloading the data…"</string>
+    <string name="label_text_progress_notify">Loading…</string>
+    <string name="notify_message_body">Confirm save operation.</string>
+    <string name="notify_message_body01">Confirm edit operation.</string>
+    <string name="title_progress_notify">Loading…</string>
+    <string name="title_progress">Registering a new account.</string>
+    <string name="message_progress">Verifying account registration…</string>
+
+
+
+    <!-- ===================Alert Dialog text ========== -->
+    <string name="title_update_dialog">Do you want to confirm the update?</string>
+    <string name="title_update_dialog_error">An error occurred</string>
+    <string name="msg_update_dialog_error">Error number:</string>
+    <string name="title_update_dialog_note">Note!!</string>
+    <string name="note">Alert!!</string>
+    <string name="msg_update_dialog_note">Note:</string>
+    <string name="msg_update_dialog">Click Confirm to proceed with the update</string>
+    <string name="ok">OK</string>
+    <string name="ok_success">Operation completed successfully!</string>
+    <string name="cancel_err">Operation canceled!</string>
+    <string name="cancel">Cancel</string>
+    <string name="sure">Confirm</string>
+    <string name="No">No</string>
+    <string name="invalid_username">Invalid username</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_history">History</string>
+    <string name="title_summary">Summary</string>
+    <string name="title_language">Language</string>
+    <string name="title_logout">Logout</string>
+    <string name="label_changed">Changed</string>
+    <string name="LABEL_cancelled">Cancelled</string>
+    <string name="label_delayed">Delayed</string>
+    <string name="label_new">New</string>
+    <string name="label_refresh">Refresh</string>
+    <string name="label_order_type">Order type</string>
+    <string name="label_dine_in">Dine in</string>
+    <string name="label_time_taken">Time taken</string>
+    <string name="btn_text_pump">PUMP</string>
+    <string name="placeholder_ahmed_1">Ahmed - 1</string>
+    <string name="placeholder_17_5_2022">17-5-2022</string>
+    <string name="placeholder_orders_15">Orders (15)</string>
+    <string name="placeholder__4">(4)</string>
+    <string name="placeholder__2_4">2/4</string>
+    <string name="placeholder__7">(7)</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_s">
+
+    <TextView
+        android:id="@+id/orders_title"
+        style="@style/MyHeadLineStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:text="@string/placeholder_orders_15" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pagination_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/prev_page_count_tv"
+                    style="@style/MyBodyLStyle"
+                    android:text="@string/placeholder__4" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/prev_page_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/space_xxs"
+                    android:background="@null"
+                    android:src="@drawable/ic_prev" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/page_number_tv"
+                    style="@style/MyBodyLStyle"
+                    android:text="@string/placeholder__2_4"
+                    android:layout_marginStart="@dimen/space_xxs"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/next_page_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/space_xxs"
+                    android:background="@null"
+                    android:src="@drawable/ic_next"
+                    app:cornerRadius="@dimen/border_radius_md" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/next_page_count_tv"
+                    style="@style/MyBodyLStyle"
+                    android:layout_marginStart="@dimen/space_xxs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeholder__7" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/refresh_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_s"
+                android:backgroundTint="@color/primary"
+               android:fontFamily="@font/almarai_light"
+                android:minHeight="@dimen/_30sdp"
+                android:paddingVertical="@dimen/space_xs"
+                android:text="@string/label_refresh"
+                android:textColor="?colorOnPrimary"
+                app:cornerRadius="@dimen/border_radius_md"
+                app:icon="@drawable/ic_refresh"
+                app:iconTint="?colorOnPrimary"
+                app:shapeAppearance="@style/TextAppearance.Material3.LabelLarge" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

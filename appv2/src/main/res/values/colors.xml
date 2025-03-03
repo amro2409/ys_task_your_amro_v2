@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_200">#5FD8F3</color>
+    <color name="primary_400">#0E9EBF</color>
+    <color name="primary_500">#075060</color>
+    <color name="primary_700">#053A45</color>
+    <color name="secondary_200">#FF03DAC5</color>
+    <color name="secondary_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">@color/primary_500</color>
+    <color name="primary_container">#E8FBFF</color>
+    <color name="on_primary_container">#075060</color>
+    <color name="primary_container_fixed">#C2DCE2</color>
+
+    <!--NEUTRAL COLOR-->
+    <color name="gray_50">#fdfdfd</color>
+    <color name="gray_100">#f4f4f5</color>
+    <color name="gray_200">#e7e7ea</color>
+    <color name="gray_300">#d9d9dc</color>
+    <color name="gray_400">#bfc0c9</color>
+    <color name="gray_500">#8d8f9b</color>
+    <color name="gray_600">#60626c</color>
+    <color name="gray_700">#484951</color>
+    <color name="gray_800">#313237</color>
+    <color name="gray_900">#18181b</color>
+
+    <color name="on_surface_variant">@color/gray_700</color>
+    <color name="on_surface">@color/gray_900</color>
+    <color name="on_surface_dark">@color/gray_100</color>
+
+    <color name="surface">@color/gray_50</color>
+    <color name="surface_container">@color/gray_200</color>
+    <color name="surface_container_lowest">@color/gray_100</color>
+    <color name="surface_container_low">@color/gray_100</color>
+    <color name="surface_container_high">@color/gray_200</color>
+
+    <color name="gray_container">@color/gray_300</color>
+    <color name="on_gray_container">@color/gray_800</color>
+
+
+    <!--SEMANTIC COLOR token-->
+    <color name="green_container">#D4FFCC</color>
+    <color name="on_green_container">#28D145</color>
+    <color name="green_container_light">#ECFFEB</color>
+
+
+    <color name="holo_red">#FF2654</color>
+    <color name="holo_red_container">#FFD6DD</color>
+    <color name="on_holo_red_container">#F4637C</color>
+    <color name="red_holo_container_light">#FFEFF2</color>
+
+
+
+    <!--sweet dialog -->
+    <color name="my_app_background">@color/surface</color>
+    <color name="my_app_error">#F4EBEB</color>
+    <color name="my_app_on_error">@android:color/holo_red_light</color>
+    <color name="is_title_color_dark">#FFFFFF</color>
+    <color name="is_message_color_dark">#FFFFFF</color>
+    <color name="is_btn_text_color_white">#FFFFFF</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="is_title_color">#575757</color>
+    <color name="is_message_color">#797979</color>
+    <!-- color background view in status success or error -->
+    <color name="is_trans_success_stroke_color">#33A5DC86</color>
+    <color name="is_success_stroke_color">#A5DC86</color>
+    <color name="is_error_stroke_color">#F27474</color>
+    <color name="is_warning_stroke_color">#F8BB86</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="sweet_dialog_bg_color_dark">#E6222222</color>
+    <color name="colorMeLine">#908B8B</color>
+    <color name="red">#EB1D24</color>
+
+</resources>

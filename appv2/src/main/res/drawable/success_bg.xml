@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="?attr/colorControlHighlight"
+    tools:targetApi="lollipop">
+    <item android:id="@id/mask">
+        <inset android:insetTop="@dimen/_2sdp"
+            android:insetBottom="@dimen/_2sdp">
+        <shape>
+            <solid android:color="@color/is_trans_success_stroke_color" />
+            <stroke
+                android:width="0.7dp"
+                android:color="@color/is_success_stroke_color"
+                android:dashWidth="@dimen/_3sdp"
+                android:dashGap="@dimen/_2sdp" />
+            <padding
+                android:left="@dimen/_8sdp"
+                android:right="@dimen/_8sdp"
+                android:bottom="@dimen/_4sdp"
+                android:top="@dimen/_4sdp"
+                tools:targetApi="m" />
+        </shape>
+        </inset>
+    </item>
+
+</ripple>
+

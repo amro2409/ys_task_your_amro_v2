@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="?attr/colorControlHighlight"
+    tools:targetApi="lollipop">
+    <item
+        android:id="@+id/mask"
+        tools:targetApi="m">
+        <inset
+            android:insetTop="@dimen/_2sdp"
+            android:insetBottom="@dimen/_2sdp">
+            <shape>
+                <solid android:color="@color/my_app_error" />
+                <stroke
+                    android:width="0.7dp"
+                    android:color="@color/is_error_stroke_color"
+                    android:dashWidth="@dimen/_3sdp"
+                    android:dashGap="@dimen/_2sdp" />
+                <padding
+                    android:left="@dimen/_8sdp"
+                    android:right="@dimen/_8sdp"
+                    android:top="@dimen/_4sdp"
+                    android:bottom="@dimen/_4sdp"/>
+            </shape>
+        </inset>
+    </item>
+
+</ripple>
+
+
+

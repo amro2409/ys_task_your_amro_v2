@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="@dimen/space_xs">
+    <shape>
+        <solid android:color="@color/surface_container" />
+        <corners android:radius="@dimen/border_radius_md" />
+        <size
+            android:width="@dimen/_200sdp"
+            android:height="@dimen/_40sdp" />
+        <padding
+            android:bottom="@dimen/space_xs"
+            android:left="@dimen/space_s"
+            android:right="@dimen/space_s"
+            android:top="@dimen/space_xs" />
+    </shape>
+</inset>

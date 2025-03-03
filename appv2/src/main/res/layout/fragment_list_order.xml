@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_xxs"
+    android:weightSum="1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Top Bar  -->
+    <include layout="@layout/custom_top_bar_status" />
+    <!-- Section Main Content Orders List -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/container_corner_bg"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Title Section, action bar-->
+            <include layout="@layout/layout_title_with_pagination_refresh" />
+            <!--  Order Cards-->
+            <include layout="@layout/order_main_list_card" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
