@@ -47,7 +47,7 @@
         <item name="android:textSize">@dimen/_18ssp</item>
         <item name="android:textColor">@color/on_primary_container</item>
         <item name="android:layout_marginEnd" >@dimen/space_xs</item>
-        <item name="android:paddingEnd" >@dimen/space_xs</item>
+        <item name="android:paddingEnd" >@dimen/space_xxs</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/almarai_bold</item>
         <item name="android:paddingVertical" tools:ignore="NewApi">@dimen/space_xxs</item>

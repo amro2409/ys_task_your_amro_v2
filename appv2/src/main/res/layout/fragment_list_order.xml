@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <!-- Title Section, action bar-->
-            <include layout="@layout/layout_title_with_pagination_refresh" />
+            <include layout="@layout/layout_pagingation_with_refresh" />
             <!--  Order Cards-->
             <include layout="@layout/order_main_list_card" />
 

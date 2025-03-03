@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/log_in"
+                android:text="@string/title_login"
                 android:textColor="@color/primary" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
-                android:text="@string/please_enter_your_pin_code_to_login"
+                android:text="@string/lbl_message_body_login_hint_pls"
                 android:textColor="@color/primary" />
 
             <LinearLayout

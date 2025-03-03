@@ -7,8 +7,8 @@
 
         <padding
             android:bottom="@dimen/space_s"
-            android:left="@dimen/space_s"
-            android:right="@dimen/space_s"
+            android:left="@dimen/space_sm"
+            android:right="@dimen/space_sm"
             />
     </shape>
 </inset>
