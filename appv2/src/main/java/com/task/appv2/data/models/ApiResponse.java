@@ -26,12 +26,7 @@ public class ApiResponse<T> {
                     '}';
         }
     }
-//    public static class Data {
-//
-//        @SerializedName("ErrNo")
-//        public T data;
-//
-//    }
+
     @NotNull
     @Override
     public String toString() {

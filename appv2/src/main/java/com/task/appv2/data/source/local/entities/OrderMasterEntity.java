@@ -7,6 +7,8 @@ import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -354,5 +356,40 @@ public class OrderMasterEntity {
     @Override
     public int hashCode() {
         return Objects.hash(orderSrl, billNo, billDate, billTime, orderNote, billDocType, billDocTypeNm, lastUpdt, cnclFlg, prcssdFlg, prcssdUId, prcssdDate, adDate, ordrTrcFlg, pssdTm, ordrSts, billSrl);
+    }
+
+    @NotNull
+    @Override
+    public String toString() {
+        return "OrderMasterEntity{" +
+                "orderSrl='" + orderSrl + '\'' +
+                ", billNo='" + billNo + '\'' +
+                ", trmnlNm='" + trmnlNm + '\'' +
+                ", trmnlNo='" + trmnlNo + '\'' +
+                ", billDate='" + billDate + '\'' +
+                ", billTime='" + billTime + '\'' +
+                ", orderNote='" + orderNote + '\'' +
+                ", billDocType='" + billDocType + '\'' +
+                ", billDocTypeNm='" + billDocTypeNm + '\'' +
+                ", lastUpdt='" + lastUpdt + '\'' +
+                ", cnclFlg='" + cnclFlg + '\'' +
+                ", prcssdFlg='" + prcssdFlg + '\'' +
+                ", prcssdUId='" + prcssdUId + '\'' +
+                ", prcssdDate='" + prcssdDate + '\'' +
+                ", adDate='" + adDate + '\'' +
+                ", ordrTrcFlg='" + ordrTrcFlg + '\'' +
+                ", pssdTm='" + pssdTm + '\'' +
+                ", ordrSts='" + ordrSts + '\'' +
+                ", billSrl='" + billSrl + '\'' +
+                ", billSrvcType='" + billSrvcType + '\'' +
+                ", brnNo='" + brnNo + '\'' +
+                ", hallNo='" + hallNo + '\'' +
+                ", prcssTm='" + prcssTm + '\'' +
+                ", prntDate='" + prntDate + '\'' +
+                ", stgNo='" + stgNo + '\'' +
+                ", stgOrdr='" + stgOrdr + '\'' +
+                ", tblNo='" + tblNo + '\'' +
+                ", ordrDtl=" + ordrDtl +
+                '}';
     }
 }

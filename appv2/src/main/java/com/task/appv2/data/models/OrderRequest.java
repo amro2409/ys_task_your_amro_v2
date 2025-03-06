@@ -13,12 +13,31 @@ public class OrderRequest {
     }
 
     public static class OrderRequestValue {
-        String P_BRN_NO = "1"; // number branch that require fetch orders
-        String P_ORDR_SRL = ""; // Leave empty to fetch all orders
-        String P_PRCSSD_FLG = " "; // fetch order's not processed
-        String P_TRMNL_NO = "4"; // Retrieved from GetUserDetails API
-        String P_LANG_NO = "1";
-        String UNT_NO = "87";
+        @SerializedName("P_BRN_NO")
+        String pBrnNo = "1"; // number branch that require fetch orders
+        @SerializedName("P_ORDR_SRL")
+        String pOrderSrl = ""; // Leave empty to fetch all orders
+        @SerializedName("P_PRCSSD_FLG")
+        String pProcessedFlg = " "; // fetch order's not processed
+        @SerializedName("P_TRMNL_NO")
+        String pTerminalNo; //4 Retrieved from GetUserDetails API
+        @SerializedName("P_LANG_NO")
+        String pLangNo;// 1
+        @SerializedName("UNT_NO")
+        String untNo = "87";
 
+        public OrderRequestValue(String pTerminalNo,String pLangNo) {
+            this.pTerminalNo = pTerminalNo;
+            this.pLangNo = pLangNo;
+        }
+
+        public String getpLangNo() {
+            return pLangNo;
+        }
+
+        public String getpTerminalNo() {
+            return pTerminalNo;
+        }
     }
+
 }

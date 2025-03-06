@@ -33,7 +33,8 @@ public interface OrderDao {
 
     @Transaction
     @Query("SELECT * FROM OrderMasterEntity ")
-    LiveData<List<OrderWithDetails>> getOrderWithDetailsLiveData();
+    //LiveData<List<OrderWithDetails>> getOrderWithDetailsLiveData();
+    DataSource.Factory<Integer, OrderWithDetails>getOrderWithDetailsLiveData();
 
     @Query("SELECT * FROM OrderMasterEntity ")
     DataSource.Factory<Integer, OrderMasterEntity>getAllOrdersPagingSource();

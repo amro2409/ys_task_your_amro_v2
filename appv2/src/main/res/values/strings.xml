@@ -57,5 +57,7 @@
     <string name="items_title">Items</string>
     <string name="label_item_name">Item Name</string>
     <string name="label_count">Count</string>
+    <string name="placeholder_order_no_645263"># Order No 645263</string>
+    <string name="notify_not_found_result">Not Found Result.</string>
 
 </resources>

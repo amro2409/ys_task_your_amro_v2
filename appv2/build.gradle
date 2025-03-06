@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.task.appv2"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        //dataBinding true
+        //24-05-04
+        // compose true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'//1.4.1
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    //implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.4'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //navigation
+    //implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+
+    implementation 'androidx.slidingpanelayout:slidingpanelayout:1.0.0'
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
+    // room lib
+    implementation "androidx.room:room-runtime:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"//2.6.1
+    // Paging 3
+    //implementation "androidx.paging:paging-runtime:$paging_version"
+    // Paging 3
+    //implementation "androidx.paging:paging-runtime:$paging_version"
+    implementation("androidx.paging:paging-runtime:$paging_version") {
+        exclude group: "androidx.lifecycle", module: "lifecycle-viewmodel-ktx"
+        exclude group: "androidx.lifecycle", module: "lifecycle-runtime-ktx"
+        exclude group: "androidx.lifecycle", module: "lifecycle-livedata-ktx"
+        exclude group: "androidx.lifecycle", module: "lifecycle-viewmodel"
+        exclude group: "androidx.lifecycle", module: "lifecycle-runtime"
+        // Exclude any other old lifecycle modules if they appear
+    }
+
+    // RxJava work-bg
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "io.reactivex:rxandroid:$rxandroidVersion"
+    //implementation 'com.squareup.picasso:picasso:2.8'
+    //retrofit lib
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'//2.4.0
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'//2.4.0
+    implementation 'org.parceler:parceler-api:1.1.9'//0.2.13
+
+
+}

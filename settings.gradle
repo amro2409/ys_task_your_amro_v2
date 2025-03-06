@@ -1,0 +1,2 @@
+include ':appv2'
+rootProject.name = "ys_task_amro"

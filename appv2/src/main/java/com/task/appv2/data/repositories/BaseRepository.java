@@ -4,15 +4,24 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.paging.PagedList;
+import androidx.sqlite.db.SimpleSQLiteQuery;
 
+import com.task.appv2.data.models.CRUDCallback;
 import com.task.appv2.data.source.local.AppDatabase;
+import com.task.appv2.data.source.local.dao.BaseDao;
 import com.task.appv2.data.source.remote.api.ChefApiService;
 import com.task.appv2.data.models.ApiResponse;
 import com.task.appv2.data.models.RemoteListener;
+import com.task.appv2.utils.AppExecutor;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import okhttp3.RequestBody;
 import okio.Buffer;
@@ -21,14 +30,19 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public abstract class BaseRepository {
-    private static final String TAG = BaseRepository.class.getSimpleName();
     protected final AppDatabase appDatabase;
     protected final ChefApiService apiService;
+    protected final ExecutorService mExecutorService;
+
 
     public BaseRepository(AppDatabase appDatabase, ChefApiService apiService) {
         this.appDatabase = appDatabase;
         this.apiService = apiService;
+        //--
+        mExecutorService = Executors.newSingleThreadExecutor();
+
     }
+
 
     /***
      * Handle the API request body and initiate network call.
@@ -43,7 +57,7 @@ public abstract class BaseRepository {
               try{  if (response.isSuccessful()) {
 
                         if (response.body() != null) {
-                            printEvent(String.format("1-onSuccess-> result %s :%s", title, response.body().toString()));
+                            printEvent(String.format("1-onResult-> result %s :%s", title, response.body().toString()));
                             callback.onSuccess(response.body());
                             return;
                         }
@@ -67,8 +81,8 @@ public abstract class BaseRepository {
     }
 
     private void printEvent(String msg) {
-        Log.d(TAG, msg);
-        Log.d(TAG, msg);
+        Log.d(TAG(), msg);
+        Log.d(TAG(), msg);
     }
 
     private void printError(String msg) {
@@ -80,7 +94,7 @@ public abstract class BaseRepository {
         return d.substring(0, d.lastIndexOf("url"));
     }
 
-    protected void showRequestBody(@NotNull Call<ApiResponse> call) {
+    protected <T> void showRequestBody(@NotNull Call<ApiResponse<T>> call) {
         // Get the request body
         RequestBody requestBody = call.request().body();
         // Convert the request body to a string
@@ -90,20 +104,32 @@ public abstract class BaseRepository {
             try {
                 requestBody.writeTo(buffer);
                 requestBodyString = buffer.readUtf8();
-                Log.d(TAG, requestBodyString.length() + "request:" + requestBodyString);
+                Log.d(TAG(), "request:" +requestBodyString.length() + ":"+ requestBodyString);
                 //SharePerf.getInstance(mContext).addLog(requestBodyString);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+    String TAG(){
+        return this.getClass().getSimpleName();
+    }
 
     @SuppressLint("NewApi")
-    private void request(@NotNull Call<?> headerCall) {
-        Log.w(TAG, "request:" + headerCall.request().toString());
-        // Log1.w(TAG,"host:"+ headerCall.request().url().host());
-        // Log1.w(TAG,"encodedPath:"+ headerCall.request().url().encodedPath());
-        //Log1.w(TAG,"redact:"+ headerCall.request().url().redact());
-        //Log1.w(TAG,"headers:"+headerCall.request().headers().toString());
+    private  void request(@NotNull Call<?> headerCall) {
+        Log.w(TAG(), "request:" + headerCall.request().toString());
     }
+
+
+
+//--------------------------------------------------
+
+    protected PagedList.Config configPagedList() {
+        return new PagedList.Config.Builder()
+                .setEnablePlaceholders(false)
+                .setPrefetchDistance(2)
+                .setPageSize(4)
+                .build();
+    }
+
 }
